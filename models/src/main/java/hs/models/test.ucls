@@ -1,0 +1,168 @@
+<class-diagram version="0.9.86" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="true" nesting-relationships="true">  
+  <class corner="BOTTOM_RIGHT" language="java" name="hs.models.adapters.ListAdapter" project="FileManager" 
+    file="/FileManager/src/hs/models/adapters/ListAdapter.java" binary="false">    
+    <position x="1072" y="302" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="hs.models.adapters.OwnedListAdapter" project="FileManager" 
+    file="/FileManager/src/hs/models/adapters/OwnedListAdapter.java" binary="false">    
+    <position x="825" y="302" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="hs.models.BasicListModel" project="FileManager" 
+    file="/FileManager/src/hs/models/BasicListModel.java" binary="false">    
+    <position x="1072" y="390" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="hs.models.OwnedListModel" project="FileManager" 
+    file="/FileManager/src/hs/models/OwnedListModel.java" binary="false">    
+    <position x="618" y="390" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="hs.models.OwnedLinkable" project="FileManager" 
+    file="/FileManager/src/hs/models/OwnedLinkable.java" binary="false">    
+    <position x="526" y="477" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="hs.models.OwnedObservableList" project="FileManager" 
+    file="/FileManager/src/hs/models/OwnedObservableList.java" binary="false">    
+    <position x="526" y="302" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="hs.models.ObservableList" project="FileManager" 
+    file="/FileManager/src/hs/models/ObservableList.java" binary="false">    
+    <position x="327" y="302" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class corner="BOTTOM_RIGHT" language="java" name="hs.models.BasicOwnedListModel" project="FileManager" 
+    file="/FileManager/src/hs/models/BasicOwnedListModel.java" binary="false">    
+    <position x="824" y="390" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="hs.models.ListModel" project="FileManager" 
+    file="/FileManager/src/hs/models/ListModel.java" binary="false">    
+    <position x="419" y="390" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="hs.models.Linkable" project="FileManager" 
+    file="/FileManager/src/hs/models/Linkable.java" binary="false">    
+    <position x="327" y="477" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="java.util.List" project="FileManager" 
+    file="C:/Program Files/Java/jdk1.7.0/jre/lib/rt.jar" binary="true">    
+    <position x="167" y="302" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.ObservableList" file="/FileManager/src/hs/models/ObservableList.java" 
+      binary="false"/>    
+    <target project="FileManager" name="java.util.List" file="C:/Program Files/Java/jdk1.7.0/jre/lib/rt.jar" 
+      binary="true"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.ListModel" file="/FileManager/src/hs/models/ListModel.java" 
+      binary="false"/>    
+    <target project="FileManager" name="hs.models.ObservableList" file="/FileManager/src/hs/models/ObservableList.java" 
+      binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.ListModel" file="/FileManager/src/hs/models/ListModel.java" 
+      binary="false"/>    
+    <target project="FileManager" name="hs.models.Linkable" file="/FileManager/src/hs/models/Linkable.java" 
+      binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.OwnedListModel" file="/FileManager/src/hs/models/OwnedListModel.java" 
+      binary="false"/>    
+    <target project="FileManager" name="hs.models.OwnedObservableList" 
+      file="/FileManager/src/hs/models/OwnedObservableList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.OwnedLinkable" file="/FileManager/src/hs/models/OwnedLinkable.java" 
+      binary="false"/>    
+    <target project="FileManager" name="hs.models.Linkable" file="/FileManager/src/hs/models/Linkable.java" 
+      binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.OwnedListModel" file="/FileManager/src/hs/models/OwnedListModel.java" 
+      binary="false"/>    
+    <target project="FileManager" name="hs.models.ListModel" file="/FileManager/src/hs/models/ListModel.java" 
+      binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.BasicListModel" file="/FileManager/src/hs/models/BasicListModel.java" 
+      binary="false"/>    
+    <target project="FileManager" name="hs.models.BasicOwnedListModel" 
+      file="/FileManager/src/hs/models/BasicOwnedListModel.java" binary="false"/>  
+  </generalization>  
+  <realization>    
+    <source project="FileManager" name="hs.models.BasicOwnedListModel" 
+      file="/FileManager/src/hs/models/BasicOwnedListModel.java" binary="false"/>    
+    <target project="FileManager" name="hs.models.OwnedListModel" file="/FileManager/src/hs/models/OwnedListModel.java" 
+      binary="false"/>  
+  </realization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.OwnedListModel" file="/FileManager/src/hs/models/OwnedListModel.java" 
+      binary="false"/>    
+    <target project="FileManager" name="hs.models.OwnedLinkable" file="/FileManager/src/hs/models/OwnedLinkable.java" 
+      binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.adapters.ListAdapter" 
+      file="/FileManager/src/hs/models/adapters/ListAdapter.java" binary="false"/>    
+    <target project="FileManager" name="hs.models.adapters.OwnedListAdapter" 
+      file="/FileManager/src/hs/models/adapters/OwnedListAdapter.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="FileManager" name="hs.models.OwnedObservableList" 
+      file="/FileManager/src/hs/models/OwnedObservableList.java" binary="false"/>    
+    <target project="FileManager" name="hs.models.ObservableList" file="/FileManager/src/hs/models/ObservableList.java" 
+      binary="false"/>  
+  </generalization>  
+  <realization>    
+    <source project="FileManager" name="hs.models.adapters.OwnedListAdapter" 
+      file="/FileManager/src/hs/models/adapters/OwnedListAdapter.java" binary="false"/>    
+    <target project="FileManager" name="hs.models.OwnedObservableList" 
+      file="/FileManager/src/hs/models/OwnedObservableList.java" binary="false"/>  
+  </realization>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="false"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

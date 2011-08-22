@@ -1,0 +1,83 @@
+
+Case 1: Property cannot be changed by external means
+====================================================
+Examples: 
+JComponent.getFont()
+JComponent.getBackground()
+
+Value can simply be cached in the model, and assumed to be correct at all times when the model
+is the sole means of changing this property.  Changes to the model are only propagated one way,
+from the Model to the Property.  At construction time the Model should be initialized to the
+value of the Property to ensure consistency at start.
+
+On Model Change: Model->Property
+
+Case 2: Property changes by external means
+==========================================
+Examples:
+JTextField.getText() - when user enters text in field
+JComponent.isVisible() - when user closes a window
+
+Value is cached in the model (for means of determining the oldValue).  It needs to be updated
+by observing the Property resulting in an external change of the Model.  Changes to the model
+should also be propagated back to the Property.  Care must be taken to prevent loops occuring.
+
+On External Change: Property->Model (triggers Model Change)
+On Model Change: Model->Property (trigger External Change)
+
+External value wrapped in model
+===============================
+
+Model A is linked to Model B
+Model A observes an external value by means of listeners (EV observer)
+Model A is observed to update the external value (EV updater)
+
+Listeners:
+----------
+
+EV <- A
+A <- EV
+A <- B
+
+ExternalChange chain of events
+------------------------------
+                                                    A       B       EV
+Initially                                           "foo"   "foo"   "foo"
+                                                    
+EV => "bar"                                         "foo"   "foo"   "bar"
+-> EV: notifies change listeners
+-> EV observer: receives notification
+-> EV observer: A.set("bar")
+-> A: B.set("bar")
+-> B: if(B.newValue != B.oldValue): true
+   -> B: B => "bar"                                 "foo"   "bar"   "bar"
+   -> B: notify change listeners
+   -> A: receives notification
+   -> A: notify change listeners
+   -> EV updater: receives notification
+   -> EV updater: if(A(->B) != EV): false
+
+InternalChange chain of events
+------------------------------
+                                                    A       B       EV
+Initially                                           "foo"   "foo"   "foo"
+                                                    
+A.set("bar")                                        "foo"   "foo"   "foo"
+-> A: B.set("bar")
+-> B: if(B.newValue != B.oldValue): true
+   -> B: B => "bar"                                 "foo"   "bar"   "foo"
+   -> B: notify changeListeners
+   -> A: receives notification
+   -> A: notify changeListeners
+   -> EV updater: receives notification
+   -> EV updater: if(A(->B) != EV): true
+      -> EV updater: EV => "bar"                    "foo"   "bar"   "bar"
+      -> EV: notifies change listeners
+      -> EV observer: receives notification
+      -> EV observer: A.set("bar")
+      -> A: B.set("bar")
+      -> B: if(B.newValue != B.oldValue): false
+      
+   
+   
+   
