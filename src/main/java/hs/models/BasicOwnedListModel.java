@@ -35,6 +35,11 @@ public class BasicOwnedListModel<O, T> implements OwnedListModel<O, T> {
   }
   
   @Override
+  public Object proxy(ObservableList<T> linkable) {
+    throw new UnsupportedOperationException("Method not implemented");
+  }
+  
+  @Override
   public O unlink() {
     if(delegate != internalList) {
       delegate.onItemsInserted().unregister(onItemsInserted());

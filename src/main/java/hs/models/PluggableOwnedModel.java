@@ -70,7 +70,17 @@ public class PluggableOwnedModel<O, T> implements OwnedModel<O, T> {
     model.onChange().callAll(onChange());
     return owner;
   }
-  
+
+  @Override
+  public O proxy(Model<T> model) {
+    T oldValue = get();
+    unlink();
+    model.set(oldValue);
+    linkedModel = model;
+    model.onChange().callAll(onChange());
+    return owner;
+  }
+
   @Override
   public O unlink() {
     if(linkedModel != null) {
